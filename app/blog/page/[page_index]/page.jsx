@@ -3,18 +3,8 @@ import Post from "@/components/Post";
 import Pagination from "@/components/Pagination";
 import CategoryList from "@/components/CategoryList";
 
-interface IParams {
-  params: {
-    page_index: number;
-    searchParams: string[];
-  };
-}
-interface IRes {
-  posts: any[];
-  currentPage: number;
-  numPages: number;
-}
-export default async function BlogPage({ params: { page_index } }: IParams) {
+
+export default async function BlogPage({ params: { page_index } }) {
   const res = await getAllPosts({
     location: "",
     page: Number(page_index) || 1,

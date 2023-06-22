@@ -1,16 +1,10 @@
 import { getAllPosts } from "@/lib/mdx";
 import Post from "@/components/Post";
 import CategoryList from "@/components/CategoryList";
-
-interface IParams {
-  params: {
-    category_name: number;
-    searchParams: string[];
-  };
-}
+ 
 export default async function CategoryPage({
   params: { category_name: categoryName }
-}: IParams) {
+} ) {
   const res = await getAllPosts({
     location: "home",
     page: 1,
