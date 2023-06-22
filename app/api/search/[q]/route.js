@@ -1,15 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
-
-// interface IPost {
-//   frontmatter: {
-//     title: string;
-//     excerpt: string;
-//     category: string;
-//   };
-// }
-
+ 
 export async function GET(req, {params}) {
   let posts;
   if (process.env.NODE_ENV === "production") {

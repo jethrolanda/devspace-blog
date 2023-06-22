@@ -1,27 +1,9 @@
 import CategoryLabel from "@/components/CategoryLabel";
 import { getPostBySlug } from "@/lib/mdx";
 import Link from "next/link";
+ 
 
-interface IParams {
-  params: {
-    slug: string;
-    searchParams: string[];
-  };
-}
-
-interface IPost {
-  frontmatter: {
-    title: string;
-    category: string;
-    date: string;
-    cover_image: string;
-    author: string;
-    author_image: string;
-  };
-  content: React.ReactNode;
-}
-
-export default async function PostPage({ params: { slug } }: IParams) {
+export default async function PostPage({ params: { slug } } ) {
   const post = await getPostBySlug(slug);
   const { title, category, date, cover_image, author, author_image } =
     post.frontmatter;

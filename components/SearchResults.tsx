@@ -1,7 +1,6 @@
 import Post from "./Post";
 
 export default function SearchResults({ results }: any) {
-  console.log(results.length);
   if (results.length === 0) return <></>;
 
   return (
