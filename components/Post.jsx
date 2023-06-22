@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CategoryLabel from "@/components/CategoryLabel";
 
-export default function Post({ post, compact }: any) {
+export default function Post({ post, compact }) {
   return (
     <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
       {!compact && (

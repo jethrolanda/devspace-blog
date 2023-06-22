@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-export default function CategoryLabel({ children }: any) {
-  const colorKey: any = {
+export default function CategoryLabel({ children }) {
+  const colorKey  = {
     JavaScript: "yellow",
     CSS: "blue",
     Python: "green",
